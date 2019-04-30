@@ -34,7 +34,7 @@
     "clear-build-cache": "rm -rf .cache/ dist/",
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "predeploy": "rm -rf dist && parcel build src/index.html",
+    "predeploy": "rm -rf dist && parcel build src/index.html --public-url /highcharts-mockups",
     "deploy": "gh-pages -d dist"
   }
 }
