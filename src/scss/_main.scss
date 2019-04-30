@@ -1,0 +1,43 @@
+body {
+  background: #e0e1dd;
+}
+
+h1 {
+  font-size: 4.8rem;
+  color: $primary;
+}
+
+.chart {
+  height: 400px;
+}
+
+#app {
+  font-size: 1.6rem;
+  text-align: center;
+  margin: 0 auto;
+  padding: 1rem;
+  max-width: 1200px;
+}
+
+.grid {
+  display: grid;
+  grid-gap: 1em;
+  &_item-1 {
+    margin-top: 1rem;
+    grid-area: header;
+  }
+  &_item-2 {
+    grid-area: chart1;
+  }
+  &_item-3 {
+    grid-area: chart2;
+  }
+  &_item-4 {
+    grid-area: chart3;
+  }
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'header header'
+    'chart1 chart2'
+    'chart3 chart3';
+}
