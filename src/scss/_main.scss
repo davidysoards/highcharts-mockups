@@ -25,21 +25,21 @@ h1 {
   grid-gap: 1em;
   @include bp(med) {
     &_item-1 {
-      grid-area: 😊;
+      grid-area: a;
     }
     &_item-2 {
-      grid-area: 👌;
+      grid-area: b;
     }
     &_item-3 {
-      grid-area: 💋;
+      grid-area: c;
     }
     &_item-4 {
-      grid-area: 👀;
+      grid-area: d;
     }
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      '😊 😊'
-      '👌 💋'
-      '👀 👀';
+      'a a'
+      'b c'
+      'd d';
   }
 }
