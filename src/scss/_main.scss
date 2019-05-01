@@ -16,28 +16,30 @@ h1 {
   text-align: center;
   margin: 0 auto;
   padding: 1rem;
-  max-width: 1200px;
+  max-width: $container-width;
 }
 
 .grid {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   grid-gap: 1em;
-  &_item-1 {
-    margin-top: 1rem;
-    grid-area: header;
+  @include bp(med) {
+    &_item-1 {
+      grid-area: 😊;
+    }
+    &_item-2 {
+      grid-area: 👌;
+    }
+    &_item-3 {
+      grid-area: 💋;
+    }
+    &_item-4 {
+      grid-area: 👀;
+    }
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      '😊 😊'
+      '👌 💋'
+      '👀 👀';
   }
-  &_item-2 {
-    grid-area: chart1;
-  }
-  &_item-3 {
-    grid-area: chart2;
-  }
-  &_item-4 {
-    grid-area: chart3;
-  }
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    'header header'
-    'chart1 chart2'
-    'chart3 chart3';
 }
