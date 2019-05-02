@@ -18,8 +18,7 @@
     "@babel/preset-env": "^7.4.3",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.1",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.2.0",
     "eslint": "^5.12.1",
     "eslint-config-react-app": "^4.0.0",
     "eslint-plugin-flowtype": "2.x",
@@ -28,15 +27,15 @@
     "eslint-plugin-react": "7.x",
     "eslint-plugin-react-hooks": "^1.0.2",
     "gh-pages": "^2.0.1",
-    "parcel-bundler": "^1.12.1",
+    "parcel-bundler": "^1.12.3",
     "prettier": "^1.16.1",
     "sass": "^1.19.0"
   },
   "scripts": {
     "clear-build-cache": "rm -rf .cache/ dist/",
-    "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html",
-    "predeploy": "rm -rf dist && parcel build src/index.html --public-url /highcharts-mockups",
+    "dev": "cross-env NODE_ENV=development parcel src/index.html",
+    "build": "cross-env NODE_ENV=production parcel build src/index.html --public-url /",
+    "predeploy": "rm -rf dist && cross-env NODE_ENV=production parcel build src/index.html --public-url /highcharts-mockups",
     "deploy": "gh-pages -d dist"
   }
 }
