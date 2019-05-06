@@ -192,7 +192,7 @@ const App = () => {
     <div id="app">
       <div className="grid">
         <div className="grid_item-1">
-          <h1>SPIA Charts</h1>
+          <h1>$PIA Charts</h1>
         </div>
         <div className="grid_item-2">
           <HCReact highcharts={Highcharts} options={incomeShortfallOptions} />
